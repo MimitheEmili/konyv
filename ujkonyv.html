@@ -192,11 +192,11 @@ if (confirm("Biztosan törölni szeretnéd ezt a pizzát?")) {
 
 // PUT
 function Modositas(index, nev, kiadasEve, ertekeles, kepneve) {
-const ujnev = prompt("Adja meg a pizza új nevét:", nev);
+const ujnev = prompt("Adja meg a újkönyv nevét:", nev);
 if (ujnev !== null) {
-    const ujkiadasEve = parseInt(prompt("Adja meg, hogy a pizza vegán-e vagy sem (1 igen, 0 nem):", kiadasEve));
-    const ujertekeles = parseInt(prompt("Adja meg, hogy a pizza vegán-e vagy sem (1 igen, 0 nem):", ertekeles));
-    const ujkepneve = prompt("Adja meg a pizza új kép URL-jét:", kepneve);
+    const ujkiadasEve = parseInt(prompt("Adja meg a kiadási évet:", kiadasEve));
+    const ujertekeles = parseInt(prompt("Adja megaz értékelést", ertekeles));
+    const ujkepneve = prompt("Adja meg a új könyv kép URL-jét:", kepneve);
 
     fetch(`http://localhost:5000/Konyv${konyvek[index].id}`, {
         method: "PUT",
